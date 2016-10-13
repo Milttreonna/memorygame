@@ -15,7 +15,8 @@ faces[5] = 'pink.png';
 
 function choose(card) {
         if (clicks == 2) {
-            return;
+          clicks=0;
+          return;
         }
         if (clicks == 0) {
             firstchoice = card;
@@ -25,7 +26,7 @@ function choose(card) {
             clicks = 2;
             secondchoice = card;``
             document.images[card].src = faces[card];
-            timer = setInterval("check()", 1000);
+            timer = setInterval("check()", 500);
         }
     }
 
@@ -35,6 +36,7 @@ function check() {
     if (faces[secondchoice] == faces[firstchoice]) {
         match++;
         document.getElementById("matches").innerHTML = match;
+
     } else {
         document.images[firstchoice].src = backcard;
         document.images[secondchoice].src = backcard;

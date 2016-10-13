@@ -1,22 +1,21 @@
 /*card color= RGB [hex]	6BB7CC*/
-#box {
-    background:#cc99ff;
-    border: #999 1px solid;
-    width: 800px;
-    height: 540px;
-    padding: 24px;
-    margin: 0px auto;
+div#box{
+	background:#CC99ff;
+	border:#999 1px solid;
+	width:800px;
+	height:540px;
+	padding:24px;
+	margin:0px auto;
 }
-
-#inside{
-  background:url(back.png) no-repeat;
-  border: #000 1px solid;
-  width: 71px;
-  height: 71px;
-  float: left;
-  margin: 10px;
-  padding: 20px;
-  font-size: 64px;
-  cursor: pointer;
-  text-align: center;
+div#box> div{
+	background: url(back.png) no-repeat;
+	border:#000 1px solid;
+	width:71px;
+	height:71px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
 }

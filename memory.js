@@ -1,11 +1,11 @@
-var clicks = 0; //counts how may picks have been made in each turn
-var firstchoice; //stores index of first card selected
-var secondchoice; //stores index of second card selected
+var clicks = 0;
+var firstchoice;
+var secondchoice;
 
-var match = 0; //counts matches made
-var backcard = "back.png"; //shows back of card when turned over
+var match = 0;
+var backcard = "back.png";
 
-var faces = []; //array to store card images
+var faces = [];
 faces[0] = 'mint.png';
 faces[1] = 'yellow.png';
 faces[2] = 'mint.png';
@@ -23,15 +23,15 @@ function choose(card) {
             clicks = 1;
         } else {
             clicks = 2;
-            secondchoice = card;
+            secondchoice = card;``
             document.images[card].src = faces[card];
             timer = setInterval("check()", 1000);
         }
     }
-    /* Check to see if a match is made */
+
 
 function check() {
-    clearInterval(timer); //stop timer
+    clearInterval(timer); 
     if (faces[secondchoice] == faces[firstchoice]) {
         match++;
         document.getElementById("matches").innerHTML = match;

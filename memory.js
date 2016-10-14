@@ -57,6 +57,9 @@ function check() {
         clicks = 0;
         return;
     }
+    if (match == 10) {
+      alert('You win!')
+    }
 }
 
 

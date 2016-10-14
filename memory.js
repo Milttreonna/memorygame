@@ -12,6 +12,10 @@ faces[2] = 'mint.png';
 faces[3] = 'pink.png';
 faces[4] = 'yellow.png';
 faces[5] = 'pink.png';
+faces[6] = 'pink.png';
+faces[7] = 'yellow.png';
+faces[8] = 'pink.png';
+faces[9] = 'yellow.png';
 
 function choose(card) {
         if (clicks == 2) {

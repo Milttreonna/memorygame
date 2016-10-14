@@ -3,29 +3,29 @@ var firstchoice;
 var secondchoice;
 
 var match = 0;
-var backcard = "back.png";
+var backcard = "img/back.png";
 
 var faces = [];
-faces[0] = 'mint.png';
-faces[1] = 'mint.png';
-faces[2] = 'blue.png';
-faces[3] = 'blue.png';
-faces[4] = 'green.png';
-faces[5] = 'green.png';
-faces[6] = 'orange.png';
-faces[7] = 'orange.png';
-faces[8] = 'pink.jpg';
-faces[9] = 'pink.jpg';
-faces[10] = 'purple.png';
-faces[11] = 'purple.png';
-faces[12] = 'red.png';
-faces[13] = 'red.png';
-faces[14] = 'violet.png';
-faces[15] = 'violet.png';
-faces[16] = 'white.png';
-faces[17] = 'white.png';
-faces[18] = 'yellow.png';
-faces[19] = 'yellow.png';
+faces[0] = 'img/mint.png';
+faces[1] = 'img/mint.png';
+faces[2] = 'img/blue.png';
+faces[3] = 'img/blue.png';
+faces[4] = 'img/green.png';
+faces[5] = 'img/green.png';
+faces[6] = 'img/orange.png';
+faces[7] = 'img/orange.png';
+faces[8] = 'img/pink.jpg';
+faces[9] = 'img/pink.jpg';
+faces[10] = 'img/purple.png';
+faces[11] = 'img/purple.png';
+faces[12] = 'img/red.png';
+faces[13] = 'img/red.png';
+faces[14] = 'img/violet.png';
+faces[15] = 'img/violet.png';
+faces[16] = 'img/white.png';
+faces[17] = 'img/white.png';
+faces[18] = 'img/yellow.png';
+faces[19] = 'img/yellow.png';
 
 function choose(card) {
         if (clicks == 2) {
@@ -58,7 +58,7 @@ function check() {
         return;
     }
     if (match == 10) {
-      alert('You win!')
+      swal({   title: "Congratulations!",   text: "You Win! Refresh to play again.",   imageUrl: "img/thumbs-up.jpg" });
     }
 }
 

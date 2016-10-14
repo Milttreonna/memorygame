@@ -7,15 +7,25 @@ var backcard = "back.png";
 
 var faces = [];
 faces[0] = 'mint.png';
-faces[1] = 'yellow.png';
-faces[2] = 'mint.png';
-faces[3] = 'pink.png';
-faces[4] = 'yellow.png';
-faces[5] = 'pink.png';
-faces[6] = 'pink.png';
-faces[7] = 'yellow.png';
-faces[8] = 'pink.png';
-faces[9] = 'yellow.png';
+faces[1] = 'mint.png';
+faces[2] = 'blue.png';
+faces[3] = 'blue.png';
+faces[4] = 'green.png';
+faces[5] = 'green.png';
+faces[6] = 'orange.png';
+faces[7] = 'orange.png';
+faces[8] = 'pink.jpg';
+faces[9] = 'pink.jpg';
+faces[10] = 'purple.png';
+faces[11] = 'purple.png';
+faces[12] = 'red.png';
+faces[13] = 'red.png';
+faces[14] = 'violet.png';
+faces[15] = 'violet.png';
+faces[16] = 'white.png';
+faces[17] = 'white.png';
+faces[18] = 'yellow.png';
+faces[19] = 'yellow.png';
 
 function choose(card) {
         if (clicks == 2) {

@@ -41,7 +41,7 @@ function choose(card) {
         secondchoice = card;
         ``
         document.images[card].src = faces[card];
-        timer = setInterval("check()", 1000);
+        timer = setInterval("check()", 500);
     }
 }
 

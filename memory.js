@@ -40,7 +40,7 @@ function choose(card) {
             clicks = 2;
             secondchoice = card;``
             document.images[card].src = faces[card];
-            timer = setInterval("check()", 500);
+            timer = setInterval("check()", 300);
         }
     }
 

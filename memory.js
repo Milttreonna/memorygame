@@ -58,7 +58,11 @@ function check() {
         return;
     }
     if (match == 10) {
-      swal({   title: "Congratulations!",   text: "You Win! Refresh to play again.",   imageUrl: "img/thumbs_up.jpg" });
+      swal({   title: "Congratulations!",   text: "You Win!.",   imageUrl: "img/thumbs_up.jpg" },
+      function(){
+       location.reload();
+   }
+);
     }
 }
 

@@ -28,21 +28,22 @@ faces[18] = 'img/yellow.png';
 faces[19] = 'img/yellow.png';
 
 function choose(card) {
-        if (clicks == 2) {
-          clicks=0;
-          return;
-        }
-        if (clicks == 0) {
-            firstchoice = card;
-            document.images[card].src = faces[card];
-            clicks = 1;
-        } else {
-            clicks = 2;
-            secondchoice = card;``
-            document.images[card].src = faces[card];
-            timer = setInterval("check()", 500);
-        }
+    if (clicks == 2) {
+        clicks = 0;
+        return;
     }
+    if (clicks == 0) {
+        firstchoice = card;
+        document.images[card].src = faces[card];
+        clicks = 1;
+    } else {
+        clicks = 2;
+        secondchoice = card;
+        ``
+        document.images[card].src = faces[card];
+        timer = setInterval("check()", 1000);
+    }
+}
 
 
 function check() {
@@ -58,11 +59,15 @@ function check() {
         return;
     }
     if (match == 10) {
-      swal({   title: "Congratulations!",   text: "You Win!",   imageUrl: "img/thumbs_up.jpg" },
-      function(){
-       location.reload();
-   }
-);
+        swal({
+                title: "Congratulations!",
+                text: "You Win!",
+                imageUrl: "img/thumbs_up.jpg"
+            },
+            function() {
+                location.reload();
+            }
+        );
     }
 }
 

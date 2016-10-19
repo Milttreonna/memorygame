@@ -1,9 +1,11 @@
 var clicks = 0;
 var firstchoice;
 var secondchoice;
+var choices = [];
 
 var match = 0;
 var backcard = "img/back.png";
+var solved = [];
 
 var faces = [];
 faces[0] = 'img/mint.png';
@@ -28,49 +30,38 @@ faces[18] = 'img/yellow.png';
 faces[19] = 'img/yellow.png';
 
 function choose(card) {
-    if (clicks == 2) {
-        clicks = 0;
+    if (solved.includes(card)) {
         return;
     }
-    if (clicks == 0) {
-        firstchoice = card;
-        document.images[card].src = faces[card];
-        clicks = 1;
-    } else {
-        clicks = 2;
-        secondchoice = card;
-        ``
-        document.images[card].src = faces[card];
-        timer = setInterval("check()", 500);
-    }
-}
-
-
-function check() {
-    clearInterval(timer);
-    if (faces[secondchoice] == faces[firstchoice]) {
-        match++;
-        document.getElementById("matches").innerHTML = match;
-
-    } else {
-        document.images[firstchoice].src = backcard;
-        document.images[secondchoice].src = backcard;
-        clicks = 0;
-        return;
-    }
-    if (match == 10) {
-        swal({
-                title: "Congratulations!",
-                text: "You Win!",
-                imageUrl: "img/thumbs_up.jpg"
-            },
-            function() {
-                location.reload();
+    if (choices.length === 0) {
+        choices.push(card);
+        document.images[choices[0]].src = faces[choices[0]];
+    } else if (choices.length === 1 && card != choices[0]) {
+        choices.push(card);
+        document.images[choices[1]].src = faces[choices[1]];
+        if (faces[choices[0]] === faces[choices[1]]) {
+            solved.push(choices[0]);
+            solved.push(choices[1]);
+            match++;
+            document.getElementById("matches").innerHTML = match;
+            if (match === 10) {
+                swal({
+                    title: "Congratulations!",
+                    text: "You Win!",
+                    imageUrl: "img/thumbs_up.jpg"
+                }, location.reload);
             }
-        );
+        } else {
+            var i = choices[0];
+            var j = choices[1];
+            setTimeout(function() {
+                document.images[i].src = backcard;
+                document.images[j].src = backcard;
+            }, 500);
+        }
+        choices = [];
     }
 }
-
 
 function shuffle(a) {
     var j, x, i;

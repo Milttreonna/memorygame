@@ -49,7 +49,9 @@ function choose(card) {
                     title: "Congratulations!",
                     text: "You Win!",
                     imageUrl: "img/thumbs_up.jpg"
-                }, location.reload);
+                }, function(){
+                       location.reload();
+                   } );
             }
         } else {
             var i = choices[0];
